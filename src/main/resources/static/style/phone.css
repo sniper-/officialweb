@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hide{ overflow:hidden; width:100%; height:100%; position:fixed;}
+
+.nav_but_box {
+	display: none;
+}
+.phone_nav .nav_main {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: 999;
+}
+
+@media screen and (max-width:1200px){
+/*导航按钮*/
+.nav_but_box2{ opacity: 1;}
+
+
+
+.nav_li>b{display:none;}
+.nav_more>b{width:40px;height:40px;position:absolute;top:0;right:0;z-index:3;display:block;}
+
+.hide .phone_nav{ height:100%;}
+
+.phone_nav{display:block;width:100%; height:0; left:0; top:0; position: absolute;}
+.phone_nav .nav_but_box{ display:block; position:absolute;width:26px;height:26px; right:20px; top:56px; margin-top:7px; transition:all 0.7s; -webkit-transition:all 0.7s; z-index:9999999; width:60px;}
+.phone_nav .nav_but_box i{ line-height:26px; padding-right:5px; color:#333; float:left;}
+.phone_nav .nav_but { display:inline-block; position:relative;width:25px; height:2px; z-index:2;
+background:#666;
+-webkit-transition-property: background-color, -webkit-transform;
+transition-property: background-color, -webkit-transform;
+transition-property: background-color, transform;
+transition-property: background-color, transform, -webkit-transform;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;}
+.phone_nav .nav_but:before,.nav_but:after {content:''; display:block; width:25px; height:2px; position:absolute; background:#666;
+-webkit-transition-property: margin, -webkit-transform;
+transition-property: margin, -webkit-transform;
+transition-property: margin, transform;
+transition-property: margin, transform, -webkit-transform;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;}
+.phone_nav .nav_but:before{margin-top:-8px;} 
+.phone_nav .nav_but:after {margin-top:8px;}
+
+/*导航名称*/
+.phone_nav .nav_main{width:0; height:100%; position:absolute;top:107px;left:0;opacity:0; transition:all 0.5s ease 0.2s; -webkit-transition:all 0.5s ease 0.2s;background:rgba(0,0,0,0.85); z-index:999;}
+.phone_nav .nav_main .nav_ul{margin-bottom:110px;}
+.phone_nav .nav_main .nav_li{ transform:translateX(100px); -webkit-transform:translateX(100px); max-height:40px; transition:all 0.8s ease; -webkit-transition:all 0.8s ease;position:relative;  white-space:nowrap;margin:0 10px;overflow:hidden;}
+.phone_nav .nav_main .nav_li.one{max-height:999px; }
+.phone_nav .nav_main .nav_li ul{display:none;}
+.phone_nav .nav_main .nav_li.one ul{display:block;}
+.phone_nav .nav_main .nav_li>a{display:block;white-space: nowrap; font-size:14px;height:39px;line-height:39px;color:#fff;border-top:1px solid rgba(255,255,255,0.5);}
+.phone_nav .nav_main .nav_li_first>a{border-top:none;}
+.phone_nav .nav_main .nav_li_last{height:41px;}
+.phone_nav .nav_main .nav_li_last>a{border-bottom:1px solid rgba(255,255,255,0.5);}
+.phone_nav .nav_more.nav_li>a{background:url(../images/iphone_nav_xia.png) right center no-repeat;}
+.phone_nav .nav_main .nav_li>a span{ font-size:12px; padding-left:10px;}
+
+.phone_nav .nav_more li{height:30px;}
+.phone_nav .nav_more li a{display:block; margin-left:20px; padding-top:5px;padding-bottom:6px; }
+.phone_nav .nav_more li a span{margin-left:20px;color:#fff;padding-left:30px; background:url(../images/iphone_nav2.png) left center no-repeat;}
+.phone_nav .nav_more ul{padding-bottom:10px;}
+
+
+/*打开样式*/
+.phone_nav{ transition-delay:1s; -webkit-transition-delay:1s;display:block; z-index:9999; }
+.phone_nav_one{transition-delay:0s; -webkit-transition-delay:0s; }
+
+.phone_nav_one .nav_main {opacity:1; width:100%; overflow:scroll;}
+.phone_nav_one .nav_but{background:rgba(0, 0, 0, 0);}
+.phone_nav_one .nav_but:before {margin-top: 0; transform: rotate(45deg); -webkit-transform: rotate(45deg);}
+.phone_nav_one .nav_but:after {margin-top:0; transform: rotate(-45deg); -webkit-transform: rotate(-45deg);}
+.phone_nav_one .nav_but_box { opacity:0.8;}
+.phone_nav_one .nav_main .nav_li{ transform:translateX(0); -webkit-transform:translateX(0);}
+
+
+/*首页*/
+.in_phone_nav .nav_but_box{ top:30px;}
+
+}
+
+
+@media screen and (max-width:1002px){
+.phone_nav .nav_but_box{ margin-top:0px;}
+
+}
+
